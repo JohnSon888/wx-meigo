@@ -28,7 +28,7 @@
     },{
       "pagePath": "pages/category/index",
       "text": "分类精选",
-      "iconPath": "images/navigation_typebutton_press.png",
+      "iconPath": "images/navigation_typebutton_normal.png",
       "selectedIconPath": "images/navigation_typebutton_press.png"
     },{
       "pagePath": "pages/cart/index",
