@@ -1,5 +1,4 @@
-import menus from '../../utils/menus.js'
-var app = getApp()
+var api = require('../../utils/api.js')
 Page({
   data: {
     text: "Page main",
@@ -23,10 +22,10 @@ Page({
     interval: 3000,
     duration: 1200,
     toView: 'blue',
-    'menus': menus,
     selectedMenuId: '1',
     currentMenuId: '0',
     rightSideW: '0',
+    cateList: [],
     total: {
       count: 0,
       money: 0
@@ -41,45 +40,6 @@ Page({
     })
     // this.data.toView = 'red'
   },
-  addCount: function (event) {
-    let data = event.currentTarget.dataset
-    let total = this.data.total
-    let menus = this.data.menus
-    let menu = menus.find(function (v) {
-      return v.id == data.cid
-    })
-    let dish = menu.dishs.find(function (v) {
-      return v.id == data.id
-    })
-    dish.count += 1;
-    total.count += 1
-    total.money += dish.price
-    this.setData({
-      'menus': menus,
-      'total': total
-    })
-    console.log(this.data.menus)
-  },
-  minusCount: function (event) {
-    let data = event.currentTarget.dataset
-    let total = this.data.total
-    let menus = this.data.menus
-    let menu = menus.find(function (v) {
-      return v.id == data.cid
-    })
-    let dish = menu.dishs.find(function (v) {
-      return v.id == data.id
-    })
-    if (dish.count <= 0)
-      return
-    dish.count -= 1;
-    total.count -= 1
-    total.money -= dish.price
-    this.setData({
-      'menus': menus,
-      'total': total
-    })
-  },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
     
@@ -90,6 +50,15 @@ Page({
     this.setData({
       rightSideW: rw
     })
+
+    api.get('http://m.meigooo.com/category/getBoutiqueList')
+      .then(res => {
+        console.log(res)
+        // 过滤商品
+        this.setData({
+          cateList: res.data.body
+        });
+      })    
     
   },
   onReady: function () {

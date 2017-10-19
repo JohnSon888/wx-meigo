@@ -1,25 +1,25 @@
 <view class="menu-wrp clearfix">
   <scroll-view scroll-y="true" class="left-side" style="{{}}">
     <!--菜单列表-->
-    <block wx:for="{{menus}}" wx:key="id" wx:for-item="menu" wx:for-index="idx">
-      <view class="menu-item {{currentMenuId == idx ? 'active' : '' }}" data-id="{{menu.id}}" data-idx="{{idx}}" data-tag="{{menu.tag}}" bindtap="selectMenu">
-        <text class="m-item-title">{{menu.name}}</text>
+    <block wx:for="{{cateList}}" wx:key="id" wx:for-item="item" wx:for-index="idx">
+      <view class="menu-item {{currentMenuId == idx ? 'active' : '' }}" data-cateId="{{item.categoryId}}" data-idx="{{idx}}" bindtap="selectMenu">
+        <text class="m-item-title">{{item.name}}</text>
       </view>
     </block>
   </scroll-view>
   <scroll-view scroll-y="true" scroll-into-view="{{toView}}" class="right-side cate-goods-r" style="width:{{rightSideW}};">
-    <block wx:for="{{menus}}" wx:key="id" wx:for-item="menu">
+    <block wx:for="{{cateList}}" wx:key="id" wx:for-item="item">
       <view class="cate-item-15 cate-item">
         <view class="cate-title">
-          <text>母婴用品</text>
-          <navigator class="goods-list-button" url="../category/hotsell.html?categoryId=15&amp;parentId=15"> 查看更多 ></navigator>
+          <text>{{item.name}}</text>
+          <navigator class="goods-list-button" url="../category/hotsell.html?categoryId=15&amp;parentId={{item.categoryId}}"> 查看更多 ></navigator>
         </view>
         <view class="cate-list clearfix">
-          <block wx:for="{{menus}}" wx:key="id" wx:for-item="menu">
+          <block wx:for="{{item.subCategories}}" wx:key="id" wx:for-item="subItem">
             <view class="cate-list-item">
-              <navigator href="../category/hotsell.html?categoryId=223&amp;parentId=15">
-                <image src="http://img01.rbyair.com/ab/ff/78/7028039d73a7843f3fc385cc55bd608c896.jpg@.webp" alt="" style="height: 77.6667px;" class="loaded"></image>
-                <view class="goods-title">纸尿裤</view>
+              <navigator url="../category/hotsell.html?categoryId=223&amp;parentId={{subItem.parentId}}">
+                <image src="{{subItem.mainPic}}" alt="" class="loaded"></image>
+                <view class="goods-title">{{subItem.name}}</view>
               </navigator>
             </view>
           </block>

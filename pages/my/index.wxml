@@ -1,2 +1,78 @@
-我的
-我上传试试
+<view class="container me" id="rby-detail" style="">
+        <view class="me-header">
+            <view class="me-header-content"><image id="me-avatar" src="../../images/avatar.jpg" alt=""></image></view>
+        </view>
+        <view class="me-bar">
+            <navigator class="me-bar-title" url="../member/orders.html?status=0">
+                <view class="me-bar-title-name">我的订单</view>
+                <view class="me-bar-title-opt iconfont icon-arrow-right"></view>
+            </navigator>
+            <view class="me-bar-content clearfix">
+                <navigator class="me-bar-content-tiem tab-item mei-track-pos" data-pos="GA-0" url="../member/orders.html?status=0">
+                    <view class="iconfont icon-orderall"></view>
+                    <view class="tab-label">全部订单</view>
+                </navigator>
+                <navigator class="me-bar-content-tiem tab-item mei-track-pos" data-pos="GA-1" url="../member/orders.html?status=5">
+                    <view class="iconfont icon-waitpay"></view>
+                    <view class="tab-label">待支付</view>
+                </navigator>
+                <navigator class="me-bar-content-tiem tab-item mei-track-pos" data-pos="GA-2" url="../member/orders.html?status=2">
+                    <view class="iconfont icon-waitsend"></view>
+                    <view class="tab-label">待发货</view>
+                </navigator>
+                <navigator class="me-bar-content-tiem tab-item mei-track-pos" data-pos="GA-3" url="../member/orders.html?status=3">
+                    <view class="iconfont icon-receivegoods"></view>
+                    <view class="tab-label">待收货</view>
+                </navigator>
+            </view>
+        </view>
+        <view class="me-list">
+            <navigator class="me-list-item" url="service.html">
+                <view class="me-list-item-icon"><text class="iconfont icon-servercenter"></text></view>
+                <view class="me-list-item-content">服务中心</view>
+                <view class="mei-list-item-opt"><text class="iconfont icon-arrow-right"></text></view>
+            </navigator>
+            <navigator class="me-list-item" url="addresses.html">
+                <view class="me-list-item-icon"><text class="iconfont icon-address"></text></view>
+                <view class="me-list-item-content">我的地址</view>
+                <view class="mei-list-item-opt"><text class="iconfont icon-arrow-right"></text></view>
+            </navigator>
+            <navigator class="me-list-item" url="groups.html">
+                <view class="me-list-item-icon"><text class="iconfont icon-activity"></text></view>
+                <view class="me-list-item-content">我的活动</view>
+                <view class="mei-list-item-opt"><text class="iconfont icon-arrow-right"></text></view>
+            </navigator>
+            <navigator class="me-list-item" url="collect.html">
+                <view class="me-list-item-icon"><text class="iconfont icon-shoucang"></text></view>
+                <view class="me-list-item-content">我的收藏</view>
+                <view class="mei-list-item-opt"><text class="iconfont icon-arrow-right"></text></view>
+            </navigator>
+        </view>
+        <view class="me-list">
+            <navigator class="me-list-item" url="coupons.html?status=0">
+                <view class="me-list-item-icon"><text class="iconfont icon-youhuiquan"></text></view>
+                <view class="me-list-item-content">优惠券</view>
+                <view class="mei-list-item-opt"><text class="iconfont icon-arrow-right"></text></view>
+            </navigator>
+	        <navigator class="me-list-item" url="../group/zero-pin.html">
+		        <view class="me-list-item-icon"><text class="iconfont icon-youhuiquan"></text></view>
+		        <view class="me-list-item-content">我的免单券</view>
+		        <view class="mei-list-item-opt"><text class="iconfont icon-arrow-right"></text></view>
+	        </navigator>
+            <navigator class="me-list-item" url="coupon.html" style="display: none">
+                <view class="me-list-item-icon"><text class="iconfont icon-exchange"></text></view>
+                <view class="me-list-item-content">兑换优惠码</view>
+                <view class="mei-list-item-opt"><text class="iconfont icon-arrow-right"></text></view>
+            </navigator>
+	        <navigator class="me-list-item" url="javascript:;" id="change-modifyphone" style="">
+		        <view class="me-list-item-icon"><text class="iconfont icon-modifyphone"></text></view>
+		        <view class="me-list-item-content">修改手机号</view>
+		        <view class="mei-list-item-opt"><text class="iconfont icon-arrow-right"></text></view>
+	        </navigator>
+            <navigator class="me-list-item" url="tel:021-54106970">
+                <view class="me-list-item-icon"><text class="iconfont icon-dianhua"></text></view>
+                <view class="me-list-item-content">客服电话</view>
+                <view class="mei-list-item-opt"><text class="iconfont icon-arrow-right"></text></view>
+            </navigator>
+        </view> 
+    </view>

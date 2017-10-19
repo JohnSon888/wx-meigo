@@ -1,51 +1,142 @@
-.container {
-	display: flex;
-  	flex-direction: column;
-  	align-items: stretch;
- 	padding-top: 10rpx; 
+@import "../../fonts/iconfont.wxss";
+image {
+  width: 100%;
+  height: 100%;
+}
+.clearfix:after, .clearfix:before {
+    content:"";
+    height:0;
+    line-height:0;
+    display:block;
+    visibility:hidden;
+    clear:both;
+}
+.clearfix{
+  zoom: 1;
+}
+.container{
+  background: #fff;
+}
+.me-header {
+    display: block;
+    width: 100%;
+    padding: 48rpx 0;
+    text-align: center;
+    background-color: #fff;
 }
 
-.block {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	height: 110rpx;
-	margin-bottom: 10rpx; 
+.me-header .me-header-content {
+    height: 116rpx;
+    width: 116rpx;
+    margin: 0 auto;
+    padding: 8rpx;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px 0 rgba(0,0,0,.1);
+    border-radius: 100%;
 }
 
-.left {
-	width: 15%;
-	height: 100%;
-	margin:0 10rpx;
+.me-header .me-header-content image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    -webkit-border-radius: 100% 100% 100% 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100% 100% 100% 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+}
+.me-bar, .me-list {
+    margin-bottom: 16rpx;
+}
+.me-bar {
+    background: #fff;
+}
+.me-bar-title {
+    position: relative;
+    display: flex;
+    height: 82rpx;
+    line-height: 82rpx;
+}
+.me-bar-title:after {
+    content: "";
+    position: absolute;
+    left: 16rpx;
+    right: 16rpx;
+    bottom: 0;
+    height: 1px;
+    line-height: 1px;
+    background-color: #ebebeb;
+}
+.me-bar-title .me-bar-title-name {
+    font-size: 34rpx;
+    color: #000;
+    margin-left: 30rpx;
+    flex: 1;
+}
+.me-bar-title .me-bar-title-opt {
+    width: 36rpx;
+    margin-right: 16rpx;
+    color: #909090;
+}
+.me-bar-content {
+    color: #909090;
+}
+.me-bar-content .me-bar-content-tiem {
+    position: relative;
+    display: block;
+    float: left;
+    width: 25%;
+    padding: 36rpx 0 28rpx;
+    text-align: center;
+    vertical-align: middle;
+}
+.me-bar-content .me-bar-content-tiem .iconfont {
+    position: relative;
+    line-height: 48rpx;
+    font-size: 48rpx;
+    padding-top: 0;
+    margin-bottom: 16rpx;
+}
+.me-bar-content .me-bar-content-tiem .tab-label {
+    font-size: 22rpx;
+    line-height: 32rpx;
 }
 
-.default {
-	width: 15%;
-	height: 100%;
-	margin:0 10rpx;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	background-color: black;
+.me-list-item {
+    position: relative;
+    display: flex;
+    height: 86rpx;
+    line-height: 86rpx;
 }
-
-.default image {
-	width: 70%;
-	height: 70%;
+.me-list-item:after {
+    content: " ";
+    position: absolute;
+    left: 16rpx;
+    right: 16rpx;
+    bottom: 0;
+    height: 1px;
+    line-height: 1px;
+    background-color: #ebebeb;
 }
-
-.right {
-	flex: 1;
-	height: 100%;
-	border-bottom: 1px solid #eee;
+.me-list-item .iconfont{
+  font-size: 24px;
 }
-
-.fav-name {
-	font-size: 16px;
+.icon-arrow-right{
+  font-size: 20px;
 }
-
-.fav-count {
-	font-size: 12px;
-	color: #999;
+  
+.me-list-item .me-list-item-icon {
+    width: 58rpx;
+    text-align: center;
+    margin: 0 30rpx;
+    color: #c7c7c7;
+}
+.me-list-item .me-list-item-content {
+    flex: 1;
+    font-size: 34rpx;
+}
+.me-list-item .mei-list-item-opt {
+    width: 36rpx;
+    margin-right: 16rpx;
+    color: #909090;
 }

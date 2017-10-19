@@ -94,9 +94,10 @@
 }
 .cate-goods-r .cate-list-item image {
     display: block;
+    width: 120rpx;
+    height: 120rpx;
     max-width: 100%;
     max-height: 100%;
-    opacity: 0;
     transition: .3s ease-in opacity;
 }
 .cate-goods-r .cate-list-item .goods-title{
