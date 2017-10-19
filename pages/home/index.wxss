@@ -1,0 +1,255 @@
+image {
+  width: 100%;
+  height: 100%;
+}
+.clearfix:after, .clearfix:before {
+    content:"";
+    height:0;
+    line-height:0;
+    display:block;
+    visibility:hidden;
+    clear:both;
+}
+.clearfix{
+  zoom: 1;
+}
+.menu-wrapper {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0rpx;
+  width: 100%;
+  height: 92rpx;
+  line-height: 92rpx;
+  background-color: #fff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+}
+
+.menu-list {
+   width: 100%;
+  white-space: nowrap; 
+}
+
+.menu-list .menu-item {
+  margin: 0rpx 20rpx;
+  position: relative;
+  display: inline-block;
+  height: 80rpx;
+  line-height: 80rpx;
+  transition: 0.2s;
+  overflow: hidden;
+  font-size: 32rpx;
+}
+
+.menu-list .menu-item.active {
+  color: #ff8500;
+  font-weight: 700;
+  border-bottom: 4rpx solid #ff8500;
+}
+
+.container {
+  padding-top: 92rpx;
+  width: 100%;
+  background: #ebebeb;
+}
+
+.widget-main-slider, .widget-swiper-slide image {
+  width: 100%;
+}
+
+.widget-main-block.widget-main-block-type17 {
+  background-color: #fff;
+}
+
+.widget-main-block.gap {
+  margin-bottom: 16rpx;
+}
+
+.widget-links-wrapper {
+  position: relative;
+}
+
+.widget-links {
+  padding: 28rpx 0 16rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.widget-links .widget-links-item {
+  width: 20%;
+}
+
+.widget-links .widget-links-item .mei-track-pos {
+  text-align: center;
+}
+
+.widget-links .widget-links-item .mei-track-pos image {
+  width: 88rpx;
+  height: 88rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.widget-links .widget-links-item .mei-track-pos text {
+  display: inline-block;
+  width: 120rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 24rpx;
+  text-align: center;
+  overflow: hidden;
+  color: #909090;
+}
+
+/*商品列表  */
+
+.pin-item-list {
+  background-color: #ebebeb;
+}
+
+.index-pin-item {
+  margin: 0 4rpx 8rpx;
+  background-color: #fff;
+}
+
+.index-pin-item .pin-list-title {
+  display: inline-block;
+  margin: 16rpx 20rpx;
+  max-height: 80rpx;
+  overflow: hidden;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #2c2c2c;
+}
+
+.index-pin-item .goodsPic {
+  display: block;
+  height: 380rpx;
+  transition: 0.3s ease-in opacity;
+}
+
+.pin-list-content {
+  margin: 0 16rpx;
+  padding-bottom: 16rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pin-list-content .content-left {
+  padding-top: 12rpx;
+}
+
+.pin-list-content .content-left text:first-child {
+  color: #f34;
+  font-size: 48rpx;
+}
+
+.pin-list-content .content-left text:nth-child(2) {
+  font-size: 24rpx;
+  color: #9b9b9b;
+  margin-left: 12rpx;
+}
+
+.member-avatars {
+  position: relative;
+  display: inline-block;
+  width: 80rpx;
+  height: 48rpx;
+  margin-right: 16rpx;
+}
+
+.member-avatars .member-avatar-circle {
+  position: absolute;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  top: 12rpx;
+  border: 1px solid #ebebeb;
+}
+
+.member-avatars .member-avatar-circle:nth-child(2) {
+  left: 32rpx;
+}
+
+.go-pin-btn {
+  width: 20rpx;
+  height: 68rpx;
+  border-radius: 8rpx;
+  line-height: 68rpx;
+  background-color: #ff8500;
+  color: #fff;
+  text-align: center;
+  padding: 10rpx 18rpx;
+  font-size: 28rpx;
+  /* display: inline-block; */
+}
+
+.widget-title-link {
+  background-color: #fff;
+  padding: 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+}
+
+.widget-title-link text {
+  font-weight: 700;
+  color: #4c3a30;
+}
+
+.widget-title-link view {
+  color: #9b9b9b;
+}
+
+.widget-item-slider {
+  position: relative;
+  width: 100%;
+  height: 352rpx;
+  padding-top: 10rpx;
+  background-color: #fff;
+}
+
+.widget-item-slider .widget-item-slider-item {
+  display: inline-block;
+  height: 352rpx;
+  width: 240rpx;
+  margin: -24rpx 14rpx 0;
+  text-align: center;
+}
+
+.widget-item-slider-inner{
+  height: 100%;
+  white-space: nowrap;
+}
+.widget-item-slider .widget-item-slider-item .widget-item-slider-item-pic,
+.widget-item-slider .widget-item-slider-item .widget-item-slider-item-pic image {
+  width: 240rpx;
+  height: 240rpx;
+  z-index: 0;
+  position: relative;
+}
+
+.widget-item-slider .title {
+  display: block;
+  margin-bottom: 6rpx;
+  height: 40rpx;
+  position: relative;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 24rpx;
+}
+
+.widget-item-slider .price {
+  font-size: 34rpx;
+  color: #ff374a;
+  display: block;
+  text-align: center;
+  line-height: 40rpx;
+}
+.widget-item-slider .price::first-letter {
+  font-size: 28rpx;
+}

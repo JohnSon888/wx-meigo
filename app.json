@@ -1,9 +1,7 @@
 {
   "pages": [
     "pages/home/index",
-    "pages/together/index",
     "pages/category/index",
-    "pages/cart/index",
     "pages/my/index"
   ],
   "window": {
@@ -20,21 +18,11 @@
       "text": "首页",
       "iconPath": "images/navigation_homebutton_normal.png",
       "selectedIconPath": "images/navigation_homebutton_press.png"
-    }, {
-      "pagePath": "pages/together/index",
-      "text": "一起买",
-      "iconPath": "images/navigation_userbutton_normal.png",
-      "selectedIconPath": "images/navigation_userbutton_press.png"
     },{
       "pagePath": "pages/category/index",
       "text": "分类精选",
       "iconPath": "images/navigation_typebutton_normal.png",
       "selectedIconPath": "images/navigation_typebutton_press.png"
-    },{
-      "pagePath": "pages/cart/index",
-      "text": "购物车",
-      "iconPath": "images/navigation_cartbutton_normal.png",
-      "selectedIconPath": "images/navigation_cartbutton_press.png"
     },{
       "pagePath": "pages/my/index",
       "text": "我的",
