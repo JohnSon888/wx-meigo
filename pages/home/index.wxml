@@ -1,14 +1,14 @@
 <view class="">
   <view class="menu-wrapper">
-    <scroll-view class="menu-list"  scroll-x="true">
-      
+    <scroll-view class="menu-list" scroll-x="true">
+      <text class="menu-item {{currentMenuIdx==0 ? 'active' : ''}}" bindtap="handleMenuTap" data-idx="{{0}}" wx:if="{{isShow}}">推荐</text>
       <block wx:for="{{widgets[0].contents}}" wx:for-index="idx" wx:key="">
-        <text class="menu-item {{currentMenuIdx==idx ? 'active' : ''}}" bindtap="handleMenuTap"  data-idx="{{idx}}"  wx:if="{{idx == 0}}">推荐</text>
-        <text class="menu-item {{currentMenuIdx==idx ? 'active' : ''}}" bindtap="handleMenuTap"  data-idx="{{idx}}" data-contentId="{{item.contentId}}" data-target="{{item.target}}" wx:else>{{item.contentName}}</text>
+        <text class="menu-item {{currentMenuIdx==idx+1 ? 'active' : ''}}" bindtap="handleMenuTap" data-idx="{{idx+1}}" data-contentId="{{item.contentId}}" data-target="{{item.target}}">{{item.contentName}}</text>
       </block>
     </scroll-view>
   </view>
-  <view class='widget-page container'>
+  <!-- 推荐 -->
+  <view class="widget-page container {{currentId == '0' ? '' : 'hidden'}}">
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='widget-main-slider'>
       <block wx:for="{{widgets[1].contents}}" wx:key="">
         <swiper-item class="widget-swiper-slide">
@@ -33,7 +33,7 @@
     <view class="widget-main-block widget-main-block-type31">
       <view class="pin-item-list">
         <block wx:for="{{widgets[7].contents}}" wx:key="">
-          <view class="widget-item-block index-pin-item mei-track-pos" href="{{item.target}}">
+          <view class="widget-item-block index-pin-item mei-track-pos" url="{{item.target}}">
             <image src="{{item.data.mainPic}}" alt="" class="goodsPic loaded"></image>
             <view class="pin-list-contents">
               <text class="pin-list-title">{{item.data.pintuanName}}</text>
@@ -61,27 +61,174 @@
     <view class="widget-main-block widget-main-block-type24 gap">
       <view class="widget-item-block widget-title-link" data-type="1">
         <text>{{singlePinItem.contentName}}</text>
-        <view href="{{singlePinItem.target}}" class="mei-track-pos">
+        <navigator url="{{singlePinItem.target}}" class="mei-track-pos" wx:if="{{isShow}}">
           查看更多>
-        </view>
+        </navigator>
       </view>
       <view class="widget-item-block">
         <view class="widget-item-slider">
           <scroll-view class="widget-item-slider-inner" scroll-x="true">
-          <block wx:for="{{widgets[8].contents}}" wx:key="">
-            <view class="widget-item-slider-item" href="http://m.meigooo.com/pin/detail.html?pinId={{item.data.pintuanId}}">
-              <view class="widget-item-slider-item-pic">
-                <image src="{{item.data.goodsPic}}" class="loaded"></image>
+            <block wx:for="{{widgets[8].contents}}" wx:key="">
+              <view class="widget-item-slider-item" url="http://m.meigooo.com/pin/detail.html?pinId={{item.data.pintuanId}}">
+                <view class="widget-item-slider-item-pic">
+                  <image src="{{item.data.goodsPic}}" class="loaded"></image>
+                </view>
+                <view>
+                  <text class="title">{{item.data.pintuanName}}</text>
+                  <text class="price">￥{{item.data.lowPrice}}</text>
+                </view>
               </view>
-              <view>
-                <text class="title">{{item.data.pintuanName}}</text>
-                <text class="price">￥{{item.data.lowPrice}}</text>
-              </view>
-            </view>
             </block>
           </scroll-view>
         </view>
       </view>
+    </view>
+  </view>
+  <!-- 母婴 -->
+  <view class="widget-page container widget-mainslider-item  {{currentId == '1' ? '' : 'hidden'}}" wx:if="currentMenuIdx">
+    <view class="widget-main-block widget-main-block-type12 {{subWidgets[0].contents.length > 0 ? '' : 'hidden'}}">
+      <view class="widget-item-list widget-list-type12 clearfix">
+        <block wx:for="{{subWidgets[0].contents}}" wx:for-index="idx" wx:key="" wx:if="{{subWidgets[0].widgetType == '12'}}">
+          <view class="widget-item-block banner-four" data-contentId="{{item.contentId}}">
+            <navigator url="{{item.target}}" class="widget-out-link mei-track-pos">
+              <image class="widget-big-img loaded" src="{{item.mainPic}}" style="height:{{blockImgH}};"></image>
+            </navigator>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="widget-main-block widget-main-block-type31">
+      <view class="widget-title only-one" wx:if="{{subWidgetsList.title != ''}}">
+        <view class="h1">{{subWidgetsList.title}}</view>
+      </view>
+      <!--首页商品&拼团-->
+      <view class="devide-line-home"></view>
+      <view class="goods-list-two">
+        <view class="goods-wrapper clearfix">
+          <block wx:for="{{subWidgetsList.contents}}" wx:for-index="idx" wx:key="">
+            <view class="pin-list-item">
+              <navigator class="list-content mei-track-pos" url="{{item.data.target}}">
+                <view class="thumb-box" style="height: {{imgW}}; width: {{imgW}};">
+                  <view class="thumb">
+                    <image src="{{item.data.goodsPic}}" class="loaded" style="height: {{imgW}}; width: {{imgW}};"></image>
+                  </view>
+                </view>
+                <view class="goods-desc">
+                  <view class="h4">{{item.data.pintuanName}}</view>
+                  <view class="add-shoppingcart">
+                    <view class="fl font-red">￥{{item.data.lowPrice}}</view>
+                    <view class="fr font-small-gray">已拼{{item.data.salesNum}}件</view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+        </block>
+        </view>
+      </view>
+    </view>
+    <view class="bottom-link mei-track-pos {{isLinkShow == true ? '' : 'hidden'}}">
+      听说看到这里
+      <view>有97%的人会点击下面</view>
+      <text class="">去挑其它全球好商品</text>
+      <text class="iconfont icon-arrow-right"></text>
+    </view>
+  </view>
+  <!-- 水果 -->
+  <view class="widget-page container widget-mainslider-item  {{currentId == '2' ? '' : 'hidden'}}">
+    <view class="widget-main-block widget-main-block-type12 {{subWidgets[0].contents.length > 0 ? '' : 'hidden'}}">
+      <view class="widget-item-list widget-list-type12 clearfix">
+        <block wx:for="{{subWidgets[0].contents}}" wx:for-index="idx" wx:key="">
+          <view class="widget-item-block banner-four" data-contentId="{{item.contentId}}">
+            <navigator url="{{item.target}}" class="widget-out-link mei-track-pos">
+              <image class="widget-big-img loaded" src="{{item.mainPic}}" style="height:{{blockImgH}};"></image>
+            </navigator>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="widget-main-block widget-main-block-type31">
+      <view class="widget-title only-one" wx:if="{{subWidgetsList.title != ''}}">
+        <view class="h1">{{subWidgetsList.title}}</view>
+      </view>
+      <!--首页商品&拼团-->
+      <view class="devide-line-home"></view>
+      <view class="goods-list-two">
+        <view class="goods-wrapper clearfix">
+          <block wx:for="{{subWidgetsList.contents}}" wx:for-index="idx" wx:key="">
+            <view class="pin-list-item">
+              <navigator class="list-content mei-track-pos" url="{{item.data.target}}">
+                <view class="thumb-box" style="height: {{imgW}}; width: {{imgW}};">
+                  <view class="thumb">
+                    <image src="{{item.data.goodsPic}}" class="loaded" style="height: {{imgW}}; width: {{imgW}};"></image>
+                  </view>
+                </view>
+                <view class="goods-desc">
+                  <view class="h4">{{item.data.pintuanName}}</view>
+                  <view class="add-shoppingcart">
+                    <view class="fl font-red">￥{{item.data.lowPrice}}</view>
+                    <view class="fr font-small-gray">已拼{{item.data.salesNum}}件</view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+        </block>
+        </view>
+      </view>
+    </view>
+    <view class="bottom-link mei-track-pos {{isLinkShow == true ? '' : 'hidden'}}">
+      听说看到这里
+      <view>有97%的人会点击下面</view>
+      <text class="">去挑其它全球好商品</text>
+      <text class="iconfont icon-arrow-right"></text>
+    </view>
+  </view>
+  <!-- 美妆 -->
+  <view class="widget-page container widget-mainslider-item  {{currentId == '3' ? '' : 'hidden'}}">
+    <view class="widget-main-block widget-main-block-type12 {{subWidgets[0].contents.length > 0 ? '' : 'hidden'}}">
+      <view class="widget-item-list widget-list-type12 clearfix">
+        <block wx:for="{{subWidgets[0].contents}}" wx:for-index="idx" wx:key="">
+          <view class="widget-item-block banner-four" data-contentId="{{item.contentId}}">
+            <navigator url="{{item.target}}" class="widget-out-link mei-track-pos">
+              <image class="widget-big-img loaded" src="{{item.mainPic}}" style="height:{{blockImgH}};"></image>
+            </navigator>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="widget-main-block widget-main-block-type31">
+      <view class="widget-title only-one" wx:if="{{subWidgetsList.title != ''}}">
+        <view class="h1">{{subWidgetsList.title}}</view>
+      </view>
+      <!--首页商品&拼团-->
+      <view class="devide-line-home"></view>
+      <view class="goods-list-two">
+        <view class="goods-wrapper clearfix">
+          <block wx:for="{{subWidgetsList.contents}}" wx:for-index="idx" wx:key="">
+            <view class="pin-list-item">
+              <navigator class="list-content mei-track-pos" url="{{item.data.target}}">
+                <view class="thumb-box" style="height: {{imgW}}; width: {{imgW}};">
+                  <view class="thumb">
+                    <image src="{{item.data.goodsPic}}" class="loaded" style="height: {{imgW}}; width: {{imgW}};"></image>
+                  </view>
+                </view>
+                <view class="goods-desc">
+                  <view class="h4">{{item.data.pintuanName}}</view>
+                  <view class="add-shoppingcart">
+                    <view class="fl font-red">￥{{item.data.lowPrice}}</view>
+                    <view class="fr font-small-gray">已拼{{item.data.salesNum}}件</view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+        </block>
+        </view>
+      </view>
+    </view>
+    <view class="bottom-link mei-track-pos {{isLinkShow == true ? '' : 'hidden'}}">
+      听说看到这里
+      <view>有97%的人会点击下面</view>
+      <text class="">去挑其它全球好商品</text>
+      <text class="iconfont icon-arrow-right"></text>
     </view>
   </view>
 </view>
