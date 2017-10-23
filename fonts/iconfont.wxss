@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconfont';  /* project id 447204 */
-  src: url('//at.alicdn.com/t/font_447204_w3w0rk8ihae2ke29.eot');
-  src: url('//at.alicdn.com/t/font_447204_w3w0rk8ihae2ke29.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_447204_w3w0rk8ihae2ke29.woff') format('woff'),
-  url('//at.alicdn.com/t/font_447204_w3w0rk8ihae2ke29.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_447204_w3w0rk8ihae2ke29.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_447204_r9jhawewswnrk9.eot');
+  src: url('//at.alicdn.com/t/font_447204_r9jhawewswnrk9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_447204_r9jhawewswnrk9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_447204_r9jhawewswnrk9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_447204_r9jhawewswnrk9.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -38,3 +38,5 @@
 .icon-arrow-right:before { content: "\e602"; }
 
 .icon-shoucang:before { content: "\e601"; }
+
+.icon-duigou:before { content: "\e67a"; }

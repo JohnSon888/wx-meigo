@@ -21,7 +21,7 @@
         <view class="widget-item-block widget-links">
           <block wx:for="{{widgets[3].contents}}" wx:key="">
             <view class="widget-links-item">
-              <navigator class="mei-track-pos" url="{{item.target}}">
+              <navigator class="mei-track-pos" url="../pin/detail">
                 <image src="{{item.mainPic}}" class="loaded"></image>
                 <text>{{item.contentName}}</text>
               </navigator>

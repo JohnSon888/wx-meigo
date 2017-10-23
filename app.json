@@ -2,7 +2,8 @@
   "pages": [
     "pages/home/index",
     "pages/category/index",
-    "pages/my/index"
+    "pages/my/index",
+    "pages/pin/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

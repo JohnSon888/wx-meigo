@@ -1,0 +1,129 @@
+<view class="container pin-group-detail-view">
+  <view id="rby-orderpush"></view>
+  <view id="rby-detail">
+    <view class="pin-detail-content">
+      <!--商品详情-->
+      <view class="pin-detail-product">
+        <view class="pin-detail-image">
+          <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='widget-main-slider'>
+      <block wx:for="{{swipers}}" wx:key="">
+        <swiper-item class="widget-swiper-slide">
+          <image src="{{item.mainPic}}" class="slide-image" width="100%" height="150" />
+        </swiper-item>
+      </block>
+    </swiper>
+          <view class="pin-detail-msg">
+            <view class="pin-detail-price">
+              <text class="price-l inline-block font-red">￥19.90</text>
+              <text class="pin-detail-groupnum ">已拼6948件 | 2人拼单</text>
+            </view>
+            <view class="h2">【囤四个仅¥14.5/个】美国Blistex碧唇专业修护润唇膏小蓝罐7g 滋润保湿唇膜唇部打底</view>
+            <view class="h4 font-gray">美国Blistex经典产品，蓝色小圆罐，自然薄荷味，唇部滋润王！膏体轻盈，清爽不油腻，水润透气，很好吸收，涂抹后毫无负重感，轻松滋润双唇！</view>
+          </view>
+        </view>
+        <view class="service-clauses">
+          <view class="ul clearfix">
+            <view class="li">
+              <text class="iconfont icon-duigou"></text>
+              <text>全场包邮</text>
+            </view>
+            <view class="li">
+              <text class="iconfont icon-duigou"></text>
+              <text>7天退换</text>
+            </view>
+            <view class="li">
+              <text class="iconfont icon-duigou"></text>
+              <text>48小时发货</text>
+            </view>
+            <view class="li">
+              <text class="iconfont icon-duigou"></text>
+              <text>假一赔十</text>
+            </view>
+          </view>
+          <text class="iconfont icon-arrow-right"></text>
+        </view>
+        <view class="devid-line"></view>
+        <!--推荐成团-->
+        <view class="recommend-group">
+          <view class="recommend-title font-gray">以下小伙伴发起的团购，您可直接参与</view>
+          <view class="recommend-list">
+            <view class="li clearfix">
+              <image class="recommend-user-pic float-l" src="http://wx.qlogo.cn/mmopen/vi_32/YnUO6TULqJ4teUXRz3rxZ1WJJ9Qur1TMRQ1kiam6bgKS9unAnwGSxoT8MrcIbDorBjzCdSqK20ytLwiathxKJwDA/96"></image>
+              <view class="recommend-user-msg float-l">
+                <view class="h4">芮蕾</view>
+                <view>湖北 武汉市</view>
+              </view>
+              <navigator class="float-r recommend-go" url="../pin/detail.html?groupId=17450212">去拼单<i class="iconfont icon-arrow-right"></i>
+              </navigator>
+              <view class="recommend-group-time float-r">
+                <view class="font-orange">还差1人成团</view>
+                <view class="font-gray">
+                  <text><text>22</text>:<text>47</text>:<text>23</text> </text> 后结束</view>
+              </view>
+            </view>
+            <view class="li clearfix">
+              <image class="recommend-user-pic float-l" src="http://hz-rbyair-store.oss-cn-hangzhou.aliyuncs.com/gi/9e4df2f137324f0ab41f9dfb056e2072.png"></image>
+              <view class="recommend-user-msg float-l">
+                <view>喵在野</view>
+                <view>浙江 宁波市</view>
+              </view>
+              <navigator class="float-r recommend-go" url="../pin/detail.html?groupId=17449701">去拼单<i class="iconfont icon-more2 icon-arrow-right"></i>
+              </navigator>
+              <view class="recommend-group-time float-r">
+                <view class="font-orange">还差1人成团</view>
+                <view class="font-gray">
+                  <text><text>19</text>:<text>24</text>:<text>19</text> </text> 后结束</view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <!--商品详情图片-->
+        <view class="pin-detail-pics">
+          <image src="http://img01.rbyair.com/4e/92/db/6e396ec7c59ba6329fa04254e47ccc1e8c7.jpg" class="loaded"></image>
+        </view>
+        <!--猜你喜欢-->
+        <view class="h5 recommend-title">猜你喜欢</view>
+        <view class="goods-list-two" style="background: #ebebeb">
+          <view class="goods-wrapper clearfix">
+            <view class="pin-list-item">
+              <navigator class="list-content mei-track-pos" url="http://m.meigooo.com/pin/detail.html?pinId=8150">
+                <image src="http://img01.rbyair.com/c5/7f/f6/560e6104a0feb9d9d38fbab7c2101e9da47.jpg@.webp" style="" alt="" class="loaded"></image>
+                <view class="goods-desc">
+                  <view class="h4">【低至1元1包，300张/包】柔之选原生竹浆本色十竹抽纸多规格任选，抽取式面巾纸巾餐巾</view>
+                  <view class="add-shoppingcart">
+                    <view class="float-l font-red">￥9.9</view>
+                    <view class="float-r font-small-gray">已拼2015件</view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!--底部按钮-->
+      <view class="footer bottom-btns">
+        <navigator class="home-button" url="../index.html">
+          <view>
+            <text class="iconfont icon-home"></text>
+            <text class="font-gray font-small">首页</text>
+          </view>
+        </navigator>
+        <view class="pin-detail-btns">
+          <view class="li btn-buy">
+            <view class="p">
+              <text class="em"><text class="b">￥</text>24.90</text>
+              <text class="span">单独购</text>
+            </view>
+          </view>
+          <view class="li btn-open">
+            <view class="p">
+              <text class="em"><text class="b">￥</text>19.90</text>
+              <text class="span">一键拼单</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  </view>

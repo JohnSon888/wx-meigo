@@ -34,3 +34,29 @@ canvas {
 page {
 	font-family: "Helvetica", "Arial", sans-serif;
 }
+.clearfix:after, .clearfix:before {
+    content:"";
+    height:0;
+    line-height:0;
+    display:block;
+    visibility:hidden;
+    clear:both;
+}
+.clearfix{
+  zoom: 1;
+}
+.float-l {
+    float: left;
+}
+.float-r {
+    float: right;
+}
+.font-red {
+    color: #E13A37;
+}
+.font-gray {
+    color: #909090;
+}
+.font-orange {
+    color: #ff8500;
+}
