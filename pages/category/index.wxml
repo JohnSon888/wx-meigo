@@ -1,30 +1,32 @@
 <view class="menu-wrp clearfix">
-  <scroll-view scroll-y="true" class="left-side" style="{{}}">
+  <scroll-view scroll-y="true" class="left-side" style="height:{{menuListH}};">
     <!--菜单列表-->
     <block wx:for="{{cateList}}" wx:key="id" wx:for-item="item" wx:for-index="idx">
-      <view class="menu-item {{currentMenuId == idx ? 'active' : '' }}" data-cateId="{{item.categoryId}}" data-idx="{{idx}}" bindtap="selectMenu">
+      <view class="menu-item {{currentMenuId == idx ? 'active' : '' }}" data-cateId="{{item.categoryId}}" data-idx="{{idx}}" data-tag="tag-{{item.categoryId}}" bindtap="selectMenu">
         <text class="m-item-title">{{item.name}}</text>
       </view>
     </block>
   </scroll-view>
-  <scroll-view scroll-y="true" scroll-into-view="{{toView}}" class="right-side cate-goods-r" style="width:{{rightSideW}};">
-    <block wx:for="{{cateList}}" wx:key="id" wx:for-item="item">
-      <view class="cate-item-15 cate-item">
-        <view class="cate-title">
-          <text>{{item.name}}</text>
-          <navigator class="goods-list-button" url="../category/hotsell.html?categoryId=15&amp;parentId={{item.categoryId}}"> 查看更多 ></navigator>
+  <scroll-view scroll-y="true" scroll-into-view="{{toView}}" class="right-side cate-goods-r" style="width:{{rightSideW}}; height:{{menuListH}};" scroll-with-animation="true">
+    <view class="hot-list">
+      <block wx:for="{{cateList}}" wx:key="id" wx:for-item="item">
+        <view class="cate-item-{{item.categoryId}} cate-item" id="tag-{{item.categoryId}}">
+          <view class="cate-title">
+            <text>{{item.name}}</text>
+            <navigator class="goods-list-button" url="../category/hotsell.html?categoryId=15&amp;parentId={{item.categoryId}}"> 查看更多 ></navigator>
+          </view>
+          <view class="cate-list clearfix">
+            <block wx:for="{{item.subCategories}}" wx:key="id" wx:for-item="subItem">
+              <view class="cate-list-item">
+                <navigator url="../category/hotsell.html?categoryId=223&amp;parentId={{subItem.parentId}}">
+                  <image src="{{subItem.mainPic}}" alt="" class="loaded"></image>
+                  <view class="goods-title">{{subItem.name}}</view>
+                </navigator>
+              </view>
+            </block>
+          </view>
         </view>
-        <view class="cate-list clearfix">
-          <block wx:for="{{item.subCategories}}" wx:key="id" wx:for-item="subItem">
-            <view class="cate-list-item">
-              <navigator url="../category/hotsell.html?categoryId=223&amp;parentId={{subItem.parentId}}">
-                <image src="{{subItem.mainPic}}" alt="" class="loaded"></image>
-                <view class="goods-title">{{subItem.name}}</view>
-              </navigator>
-            </view>
-          </block>
-        </view>
-      </view>
-    </block>
+      </block>
+    </view>
   </scroll-view>
 </view>

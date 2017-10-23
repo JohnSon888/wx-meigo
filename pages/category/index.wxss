@@ -1,109 +1,131 @@
 .clearfix:after, .clearfix:before {
-    content:"";
-    height:0;
-    line-height:0;
-    display:block;
-    visibility:hidden;
-    clear:both;
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
 }
-.clearfix{
+
+.clearfix {
   zoom: 1;
 }
+
 /*菜单wrap*/
-.menu-wrp{
-  width:100%;
+
+.menu-wrp {
+  width: 100%;
   height: 100%;
   min-height: 1200rpx;
-  background-color:white;
-  overflow:hidden; 
-  display:flex; 
-  flex-direction:row;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
   /* justify-content: space-between;  */
 }
 
 /*左侧菜单*/
-.left-side{
-  height: 1000rpx;
+
+.left-side {
+  /* height: 1000rpx; */
   background-color: #fafafa;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   width: 180rpx;
 }
-.right-side{
-  height: 1000rpx;
-  color: #FFFFFF;
-  justify-content: center; 
-  align-items: center; 
+
+.right-side {
+  /* height: 1000rpx; */
+  color: #fff;
+  justify-content: center;
+  align-items: center;
 }
-.menu-item{
-  width: 100%; 
+
+.menu-item {
+  width: 100%;
   height: 100rpx;
-  color: #FFFFFF;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center
+  text-align: center;
 }
 
-.m-item-title{
+.m-item-title {
   font-size: 24rpx;
   color: #4c3a30;
 }
-.menu-item.active{
+
+.menu-item.active {
   background: #fff;
 }
-.menu-item.active .m-item-title{
+
+.menu-item.active .m-item-title {
   color: #ff8500;
 }
 
 /*右侧商品*/
-.cate-goods-r .cate-title {
-    background: #fff;
-    height: 64rpx;
-    line-height: 64rpx;
-    text-indent: 8rpx;
-    font-size: 13px;
-    color: #4c3a30;
-    /* width: 100%; */
-    border-radius: 4rpx 4rpx 0 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.cate-goods-r {
+  padding: 0 8rpx;
 }
+.hot-list{
+  margin-top: 20rpx;
+
+}
+
+.cate-goods-r .cate-title {
+  background: #fff;
+  height: 64rpx;
+  line-height: 64rpx;
+  text-indent: 8rpx;
+  font-size: 13px;
+  color: #4c3a30;
+  /* width: 100%; */
+  border-radius: 4rpx 4rpx 0 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .cate-goods-r .cate-title .goods-list-button {
-    width: 200rpx;
-    text-align: right;
-    font-size: 12px;
-    color: #9c9c9c;
+  width: 200rpx;
+  text-align: right;
+  font-size: 12px;
+  color: #9c9c9c;
 }
 
 .cate-goods-r  .cate-list {
-    margin-bottom: 8rpx;
-    background-color: #fff;
+  margin-bottom: 8rpx;
+  background-color: #fff;
 }
 
 .cate-goods-r .cate-list .cate-list-item {
-    float: left;
-    width: 33.33%;
-    text-align: center;
+  float: left;
+  width: 33.33%;
+  text-align: center;
 }
+
 .cate-goods-r .cate-list-item navigator {
-    display: block;
-    margin: 20rpx 22rpx 0;
+  display: block;
+  margin: 20rpx 22rpx 0;
 }
+
 .cate-goods-r .cate-list-item image {
-    display: block;
-    width: 120rpx;
-    height: 120rpx;
-    max-width: 100%;
-    max-height: 100%;
-    transition: .3s ease-in opacity;
+  display: block;
+  width: 120rpx;
+  height: 120rpx;
+  max-width: 100%;
+  max-height: 100%;
+  transition: 0.3s ease-in opacity;
+  margin: 0 auto;
 }
-.cate-goods-r .cate-list-item .goods-title{
-    height: 48rpx;
-    font-size: 22rpx;
-    line-height: 24rpx;
-    padding-top: 4rpx;
-    color: #666;
+
+.cate-goods-r .cate-list-item .goods-title {
+  height: 48rpx;
+  font-size: 22rpx;
+  line-height: 24rpx;
+  padding-top: 4rpx;
+  color: #666;
 }
