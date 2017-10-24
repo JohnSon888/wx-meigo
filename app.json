@@ -3,7 +3,24 @@
     "pages/home/index",
     "pages/category/index",
     "pages/my/index",
-    "pages/pin/detail"
+    "pages/pin/detail",
+    "pages/hotsell/hotsell",
+    "pages/orders/orders",
+    "pages/order/order",
+    "pages/service/service",
+    "pages/addresses/addresses",
+    "pages/address/address",
+    "pages/groups/groups",
+    "pages/collect/collect",
+    "pages/coupons/coupons",
+    "pages/group/zero-pin",
+    "pages/validate_phone/validate_phone",
+    "pages/activities/activities",
+    "pages/chou/list",
+    "pages/choudetail/detail",
+    "pages/shopping/commit",
+    "pages/secondkill/secondkill",
+    "pages/rcoupon/rcoupon"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -14,21 +31,25 @@
     "color": "#3c2e25",
     "selectedColor": "#ff8300",
     "borderStyle": "white",
-    "list": [{
-      "pagePath": "pages/home/index",
-      "text": "首页",
-      "iconPath": "images/navigation_homebutton_normal.png",
-      "selectedIconPath": "images/navigation_homebutton_press.png"
-    },{
-      "pagePath": "pages/category/index",
-      "text": "分类精选",
-      "iconPath": "images/navigation_typebutton_normal.png",
-      "selectedIconPath": "images/navigation_typebutton_press.png"
-    },{
-      "pagePath": "pages/my/index",
-      "text": "我的",
-      "iconPath": "images/navigation_userbutton_normal.png",
-      "selectedIconPath": "images/navigation_userbutton_press.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "images/navigation_homebutton_normal.png",
+        "selectedIconPath": "images/navigation_homebutton_press.png"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类精选",
+        "iconPath": "images/navigation_typebutton_normal.png",
+        "selectedIconPath": "images/navigation_typebutton_press.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "images/navigation_userbutton_normal.png",
+        "selectedIconPath": "images/navigation_userbutton_press.png"
+      }
+    ]
   }
 }
