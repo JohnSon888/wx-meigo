@@ -3,7 +3,7 @@
             <view class="me-header-content"><image id="me-avatar" src="../../images/avatar.jpg" alt=""></image></view>
         </view>
         <view class="me-bar">
-            <navigator class="me-bar-title" url="../member/orders.html?status=0">
+            <navigator class="me-bar-title" url="../orders/orders?status=0">
                 <view class="me-bar-title-name">我的订单</view>
                 <view class="me-bar-title-opt iconfont icon-arrow-right"></view>
             </navigator>

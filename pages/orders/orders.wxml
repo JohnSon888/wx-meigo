@@ -1,2 +1,51 @@
-<!--pages/orders/orders.wxml-->
-<text>pages/orders/orders.wxml</text>
+<view class="container order orders">
+  <scroll-view class="menu-list" scroll-x="true">
+    <block wx:for="{{widgets[0].contents}}" wx:for-index="idx" wx:key="">
+      <text class="menu-item {{currentMenuIdx==idx+1 ? 'active' : ''}}" bindtap="handleMenuTap" data-idx="{{idx+1}}" data-contentId="{{item.contentId}}" data-target="{{item.target}}">{{item.contentName}}</text>
+    </block>
+  </scroll-view>
+  <view class="order-box" id="rby-list">
+    <view class="navgate-order-item" data-oid="171019231005954">
+      <view class="sub-tab">
+        <view class="icon-sub-tab clearfix">
+          <text class="label">2017-10-19 23:10:44</text>
+          <text class="span">交易关闭</text>
+        </view>
+      </view>
+      <view class="ul order-list">
+        <view class="li order-item">
+          <navigator class="item-bder item-col-box" url="order.html?orderId=171019231005954&amp;source=weixin_pin_group">
+            <view class="item-img">
+              <image src="http://img01.rbyair.com/60/1d/bc/f436c6081fb8e47d31680de121444804edf.jpg@.webp"></image>
+            </view>
+            <view class="item-col-flex">
+              <view class="item-info">
+                <view class="h3 title">贝亲 宽口径玻璃奶瓶240ml（绿色）</view>
+                <view class="sign-txt">
+                  <text>规格：</text>
+                  <text>个</text>
+                </view>
+              </view>
+              <view class="item-pay clearfix">
+                <view class="p">￥79</view>
+                <view class="item-num">
+                  <text>数量：<text class="b">5</text></text>
+                </view>
+              </view>
+            </view>
+          </navigator>
+          <view class="mb dbox">
+            <view class="time-tabs-item">
+              <text class="true-payed">小计:</text>
+              <text class="imb-num">￥<text class="b">395</text></text>
+            </view>
+            <view class="imb-btn-box">
+              <navigator class="imb-btn white delete-order" data-oid="171019231005954">删除订单</navigator>
+              <navigator class="imb-btn hot-activ" data-oid="171019231005954" href="../index.html">热门活动</navigator>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

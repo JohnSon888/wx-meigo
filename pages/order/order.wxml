@@ -1,2 +1,98 @@
 <!--pages/order/order.wxml-->
-<text>pages/order/order.wxml</text>
+<view class="container order order-detail" id="rby-detail">
+  <view class="order-status">
+    <view class="name">交易关闭</view>
+    <view class="iconfont icon-unpay"></view>
+    <view class="iconfont icon-payover daifahuo"></view>
+    <view class="iconfont icon-payover daifahuo"></view>
+    <view class="iconfont icon-daishouhuo daishouhuo"></view>
+    <view class="iconfont icon-ordersuccess yiwancheng"></view>
+    <view class="iconfont icon-jiaoyiguanbi active"></view>
+  </view>
+  <view class="delivery-time">
+    <view id="show-more" style="display: none;">查看周期进度</view>
+    <view class="service">如有订单问题,请联系客服:
+      <navigator url="tel:021-54106970" class="tel">021-54106970</navigator>
+    </view>
+  </view>
+  <view class="order-shipping" url="../member/addresses">
+    <view class="order-shipping-icon">
+      <text class="iconfont icon-address"></text>
+    </view>
+    <view class="order-shipping-content" id="rby-address">
+      <view class="p">姓名：孙强强</view>
+      <view class="p">联系电话：18790270368</view>
+      <view class="p">身份证号码：411282199303147039</view>
+      <view class="p info">送达地址：上海上海市徐汇区宜山路822号新研大厦B座5楼</view>
+    </view>
+  </view>
+  <view class="order-payment">
+    <view class="name">支付方式</view>
+    <view class="value">微信支付</view>
+  </view>
+  <view class="order-no">
+    <view class="name">订单编号</view>
+    <view class="value">171019231005954</view>
+  </view>
+  <navigator url="../pin/detail.html?pinId=7482" class="goods-list goods-list-order">
+    <view class="goods-item">
+      <view class="thumb">
+        <image src="http://img01.rbyair.com/60/1d/bc/f436c6081fb8e47d31680de121444804edf.jpg@.webp" class="loaded"></image>
+      </view>
+      <view class="content">
+        <view class="h3">贝亲 宽口径玻璃奶瓶240ml（绿色）</view>
+        <view class="p">个</view>
+        <view class="buy">
+          <view class="price">￥79</view>
+          <view class="quantity">数量：5</view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+  <view class="ul list-group order-info default-ordy">
+    <view class="list-group-item">
+      <text class="span">运费：</text>
+      <text class="em">￥0</text>
+    </view>
+    <view class="list-group-item">
+      <text class="span">运费减免：</text>
+      <text class="em">-￥10</text>
+    </view>
+    <view class="list-group-item actualprice">
+      <text class="span">实付款：</text>
+      <text class="em">￥395</text>
+    </view>
+  </view>
+  <view class="list-group order-info default-second-ordy">
+    <view class="list-group-item">
+      <text class="span">订单编号：</text>
+      <text class="span">171019231005954</text>
+  </view>
+  <view class="list-group-item">
+    <text class="span">创建时间：</text>
+    <text class="em">2017-10-19 23:10:44</text>
+  </view>
+</view>
+<view class="bottom-down pay-success-down-app" style="position: static; margin-top:.08rem;background:#fff;">
+  <navigator class="bottom-down-link" url="http://a.app.qq.com/o/simple.jsp?pkgname=com.rbyair.app" target="_blank">
+    <image class="icon" src="../content/images/example/appdownloadlogo.4a3bfc2a.png"></image>
+    <view>
+      <view>美购-全球精品超市</view>
+      <view>APP下单更多优惠
+        <image src="../content/images/example/star.6d38532e.png" height="10" alt=""></image>
+      </view>
+    </view>
+    <view class="bottom-down-box">
+      <view class="button">立即下载</view>
+    </view>
+  </navigator>
+</view>
+<view class="order-fix-btn">
+  <navigator class="delete-order">
+    <view class="imb-btn black">删除订单</view>
+  </navigator>
+  <navigator class="hot-activ">
+    <view class="imb-btn">热门活动</view>
+  </navigator>
+</view>
+</view>
